@@ -1,10 +1,8 @@
-import React, {Suspense} from 'react';
-import {Link, Route, Routes} from 'react-router-dom';
-
+import React from 'react';
 import {classNames} from "shared/lib/classNames/classNames";
 import {AppRouter} from "app/providers/router";
 import {useTheme} from "app/providers/ThemeProvider";
-
+import {Navbar} from "widgets/Navbar";
 import './styles/index.scss';
 
 const App = () => {
@@ -12,14 +10,9 @@ const App = () => {
 
   return (
     <div className={classNames('App', {}, [theme])}>
-      <button onClick={toggleTheme}>ПЕРЕКЛЮЧИТЬ ТЕМУ</button>
-      <Link to={'/'}>
-        Главная
-      </Link>
-      <Link to={'/about'}>
-        О сайте
-      </Link>
+      <Navbar/>
       <AppRouter/>
+      <button onClick={toggleTheme}>ПЕРЕКЛЮЧИТЬ ТЕМУ</button>
     </div>
   );
 };
