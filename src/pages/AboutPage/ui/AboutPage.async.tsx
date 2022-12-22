@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // @ts-ignore
 const AboutPageAsync = React.lazy(() => import('./AboutPage'));
