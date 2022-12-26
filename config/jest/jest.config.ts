@@ -22,6 +22,7 @@ export default {
     moduleDirectories: [
         'node_modules',
     ],
+    modulePaths: ['<rootDir>/src'],
     moduleFileExtensions: [
         'js',
         'mjs',
@@ -37,7 +38,10 @@ export default {
         '**/__tests__/**/*.[jt]s?(x)',
         '**/?(*.)+(spec|test).[tj]s?(x)',
     ],
-
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.(scss)$': 'identity-obj-proxy',
+    },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
