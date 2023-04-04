@@ -1,20 +1,18 @@
-.button {
+
+.Button {
   cursor: pointer;
-  color: inherit;
-  border: none;
-  padding: 15px;
-  border-radius: 10px;
+  color: var(--inverted-primary-color);
 }
 
 .clear {
   padding: 0;
   border: none;
-  background: transparent;
+  background: none;
   outline: none;
 }
 
-.outlined {
-  padding: 15px;
+.outline {
+  padding: 10px 15px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   background: none;

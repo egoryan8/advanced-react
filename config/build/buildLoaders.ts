@@ -4,8 +4,6 @@ import { BuildOptions } from './types/config';
 import { buildCssLoader } from './loaders/buildCssLoader';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
-    const { isDev } = options;
-
     const svgLoader = {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
@@ -31,9 +29,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         },
     };
 
-    // Если не используем тс, нужен babel-loader
-
-    const cssLoader = buildCssLoader(isDev);
+    const cssLoader = buildCssLoader(options.isDev);
 
     const typescriptLoader = {
         test: /\.tsx?$/,
@@ -42,7 +38,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     };
 
     const fileLoader = {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
         use: [
             {
                 loader: 'file-loader',
@@ -51,10 +47,10 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     };
 
     return [
+        fileLoader,
+        svgLoader,
+        babelLoader,
         typescriptLoader,
         cssLoader,
-        svgLoader,
-        fileLoader,
-        babelLoader,
     ];
 }

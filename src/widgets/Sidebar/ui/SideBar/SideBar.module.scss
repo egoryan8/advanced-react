@@ -1,10 +1,10 @@
-.SideBar {
+.Sidebar {
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
-  max-width: 250px;
-  background-color: var(--inverted-bg-color);
+  background: var(--inverted-bg-color);
+
   position: relative;
-  transition: width 0.4s;
+  transition: width 0.3s;
 }
 
 .collapsed {
@@ -16,10 +16,9 @@
   bottom: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
-.langSwitcher {
-  margin-left: 10px;
+.lang {
+  margin-left: 20px;
 }

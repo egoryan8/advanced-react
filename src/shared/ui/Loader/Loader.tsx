@@ -1,12 +1,13 @@
-import React from 'react';
-import './Loader.scss';
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './Loader.module.scss';
 
-export const Loader = () => (
-    <div className="lds-spinner">
-        <div />
-        <div />
-        <div />
-        <div />
+interface LoaderProps {
+    className?: string;
+
+}
+
+export const Loader = ({ className }: LoaderProps) => (
+    <div className={classNames(cls.ldsRoller, {}, [className])}>
         <div />
         <div />
         <div />
@@ -16,5 +17,4 @@ export const Loader = () => (
         <div />
         <div />
     </div>
-
 );

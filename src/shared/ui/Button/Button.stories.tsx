@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button, ThemeButton } from './Button';
 import 'app/styles/index.scss';
+import 'app/styles/variables/global.scss';
 
 export default {
     title: 'shared/Button',
@@ -16,18 +17,72 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-    primary: true,
-    children: 'Test primary',
+    children: 'Text',
 };
 
 export const Clear = Template.bind({});
 Clear.args = {
-    children: 'Test clear',
+    children: 'Text',
     theme: ThemeButton.CLEAR,
 };
 
-export const Outlined = Template.bind({});
-Outlined.args = {
-    children: 'Test outlined',
-    theme: ThemeButton.OUTLINED,
+export const Outline = Template.bind({});
+Outline.args = {
+    children: 'Text',
+    theme: ThemeButton.OUTLINE,
 };
+
+// export const OutlineSizeL = Template.bind({});
+// OutlineSizeL.args = {
+//     children: 'Text',
+//     theme: ButtonTheme.OUTLINE,
+//     size: ButtonSize.L,
+// };
+//
+// export const OutlineSizeXl = Template.bind({});
+// OutlineSizeXl.args = {
+//     children: 'Text',
+//     theme: ButtonTheme.OUTLINE,
+//     size: ButtonSize.XL,
+// };
+
+export const OutlineDark = Template.bind({});
+OutlineDark.args = {
+    children: 'Text',
+    theme: ThemeButton.OUTLINE,
+};
+//
+// export const BackgroundTheme = Template.bind({});
+// BackgroundTheme.args = {
+//     children: 'Text',
+//     theme: ButtonTheme.BACKGROUND,
+// };
+//
+// export const BackgroundInverted = Template.bind({});
+// BackgroundInverted.args = {
+//     children: 'Text',
+//     theme: ButtonTheme.BACKGROUND_INVERTED,
+// };
+//
+// export const Square = Template.bind({});
+// Square.args = {
+//     children: '>',
+//     theme: ButtonTheme.BACKGROUND_INVERTED,
+//     square: true,
+// };
+//
+// export const SquareSizeL = Template.bind({});
+// SquareSizeL.args = {
+//     children: '>',
+//     theme: ButtonTheme.BACKGROUND_INVERTED,
+//     square: true,
+//     size: ButtonSize.L,
+// };
+//
+// export const SquareSizeXl = Template.bind({});
+// SquareSizeXl.args = {
+//     children: '>',
+//     theme: ButtonTheme.BACKGROUND_INVERTED,
+//     square: true,
+//     size: ButtonSize.XL,
+// };
