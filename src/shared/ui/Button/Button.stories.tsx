@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 import 'app/styles/index.scss';
 import 'app/styles/variables/global.scss';
 
@@ -23,13 +23,13 @@ Primary.args = {
 export const Clear = Template.bind({});
 Clear.args = {
     children: 'Text',
-    theme: ThemeButton.CLEAR,
+    theme: ButtonTheme.CLEAR,
 };
 
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Text',
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
 };
 
 // export const OutlineSizeL = Template.bind({});
@@ -49,7 +49,7 @@ Outline.args = {
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Text',
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
 };
 //
 // export const BackgroundTheme = Template.bind({});
