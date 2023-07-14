@@ -1,2 +1,2 @@
 # advanced-react
-Клон-проект Хабра 
+Клон-проект Хабра на React / TypeScript / ReduxToolkit
