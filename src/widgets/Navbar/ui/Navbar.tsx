@@ -1,13 +1,11 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Modal } from 'shared/ui/Modal/Modal';
 import React, { useCallback, useState } from 'react';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername/ui/LoginModal/LoginModal';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/User/model/selectors';
 import { userActions } from 'entities/User';
-import { d } from '@pmmmwh/react-refresh-webpack-plugin/types/options';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
