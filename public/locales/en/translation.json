@@ -10,5 +10,7 @@
   "Главная": "Main",
   "Короткий язык": "En",
   "Введите имя пользователя": "Enter username",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неверный логин или пароль": "You have entered an incorrect username or password"
 }

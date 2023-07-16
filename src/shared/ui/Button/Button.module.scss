@@ -18,6 +18,11 @@
   background: none;
 }
 
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .background {
   background: var(--bg-color);
   color: var(--primary-color);
