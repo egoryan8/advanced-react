@@ -8,4 +8,5 @@ export {
 
 export {
     StateSchema,
+    ReduxStoreWithManager,
 } from './config/StateSchema';

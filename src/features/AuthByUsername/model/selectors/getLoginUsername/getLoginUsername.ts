@@ -3,5 +3,5 @@ import { getLoginState } from 'features/AuthByUsername/model/selectors/getLoginS
 
 export const getLoginUsername = createSelector(
     getLoginState,
-    (state) => state.username,
+    (state) => state?.username || '',
 );

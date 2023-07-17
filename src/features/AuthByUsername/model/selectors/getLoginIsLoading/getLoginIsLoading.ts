@@ -3,5 +3,5 @@ import { getLoginState } from 'features/AuthByUsername/model/selectors/getLoginS
 
 export const getLoginIsLoading = createSelector(
     getLoginState,
-    (state) => state.isLoading,
+    (state) => state?.isLoading || false,
 );
