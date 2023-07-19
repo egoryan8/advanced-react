@@ -1,9 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
+import { memo } from 'react';
 
 export interface ProfilePageProps {
   className?: string;
 }
-const ProfilePage = (props: ProfilePageProps) => {
+const ProfilePage = memo((props: ProfilePageProps) => {
     const {
         className,
     } = props;
@@ -13,6 +14,6 @@ const ProfilePage = (props: ProfilePageProps) => {
             PROFILE PAGE
         </div>
     );
-};
+});
 
 export default ProfilePage;

@@ -3,6 +3,7 @@ import { SideBarItemsList, SideBarItemType } from 'widgets/Sidebar/model/items';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 import cls from './SideBarItem.module.scss';
 
 interface SideBarItemProps {
@@ -10,7 +11,7 @@ interface SideBarItemProps {
   isCollapsed: boolean;
 }
 
-export const SideBarItem = (props: SideBarItemProps) => {
+export const SideBarItem = memo((props: SideBarItemProps) => {
     const {
         item,
         isCollapsed,
@@ -22,10 +23,10 @@ export const SideBarItem = (props: SideBarItemProps) => {
         <AppLink
             to={item.path}
             theme={AppLinkTheme.SECONDARY}
-            className={cls.item}
+            className={classNames(cls.item, { [cls.collapsed]: isCollapsed }, [])}
         >
             <item.Icon className={cls.icon} />
             <span className={cls.link}>{t(item.text)}</span>
         </AppLink>
     );
-};
+});
