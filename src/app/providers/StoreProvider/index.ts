@@ -8,5 +8,6 @@ export {
 
 export {
     StateSchema,
+    ThunkConfig,
     ReduxStoreWithManager,
 } from './config/StateSchema';
