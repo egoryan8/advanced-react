@@ -19,14 +19,17 @@ export const SideBarItem = memo((props: SideBarItemProps) => {
 
     const { t } = useTranslation();
 
-    return (
+     return (
+       <>
+       {item &&
         <AppLink
-            to={item.path}
+            to={item?.path}
             theme={AppLinkTheme.SECONDARY}
             className={classNames(cls.item, { [cls.collapsed]: isCollapsed }, [])}
         >
             <item.Icon className={cls.icon} />
             <span className={cls.link}>{t(item.text)}</span>
-        </AppLink>
+        </AppLink>}
+       </>
     );
 });

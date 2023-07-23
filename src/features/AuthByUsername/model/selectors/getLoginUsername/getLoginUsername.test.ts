@@ -6,6 +6,8 @@ describe('getLoginUsername.test', () => {
     test('should return username', () => {
         const state: DeepPartial<StateSchema> = {
             login: {
+                isLoading: false,
+                error: 'error',
                 username: 'admin',
                 password: '123',
             },

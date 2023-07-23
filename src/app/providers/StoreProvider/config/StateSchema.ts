@@ -34,7 +34,7 @@ export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];
 
 export interface ThunkExtraArg {
   api: AxiosInstance,
-  navigate: (to: To, options?: NavigateOptions) => void,
+  navigate?: (to: To, options?: NavigateOptions) => void,
 }
 
 export interface ThunkConfig<T> {
