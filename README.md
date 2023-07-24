@@ -1,2 +1,2 @@
 # advanced-react
-Клон-проект Хабра на React / TypeScript / ReduxToolkit
+Веб-приложение, аналог Хабра, с продвинутой настройкой конфигов, использованием технологий, React / Redux / TypeScript
