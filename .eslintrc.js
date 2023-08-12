@@ -60,10 +60,11 @@ module.exports = {
         'no-undef': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
+
     },
     globals: {
         __IS_DEV__: true,
-        __API__: '',
+        __API__: true,
     },
     overrides: [
         {
