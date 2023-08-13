@@ -1,5 +1,14 @@
 import { Country, Currency } from 'shared/const/common';
 
+export enum ValidateProfileError {
+  INCORRECT_USER_DATA = 'INCORRECT_USER_DATA',
+  INCORRECT_AGE = 'INCORRECT_AGE',
+  INCORRECT_COUNTRY = 'INCORRECT_COUNTRY',
+  INCORRECT_AVATAR = 'INCORRECT_AVATAR',
+  INCORRECT_CITY = 'INCORRECT_CITY',
+  DATA_ERROR = 'DATA_ERROR'
+}
+
 export interface Profile {
     firstName?: string;
     lastName?: string;
@@ -17,4 +26,5 @@ export interface ProfileSchema {
   isLoading: boolean;
   error?: string;
   readonly: boolean;
+  validateErrors?: ValidateProfileError[];
 }

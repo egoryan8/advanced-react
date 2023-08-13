@@ -46,18 +46,18 @@ export const profileSlice = createSlice({
                 state.isLoading = false;
             })
             .addCase(updateProfileData.pending, (state, action) => {
-                state.error = undefined;
+                state.validateErrors = undefined;
                 state.isLoading = true;
             })
             .addCase(updateProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
-                state.error = undefined;
+                state.validateErrors = undefined;
                 state.isLoading = false;
                 state.data = action.payload;
                 state.form = action.payload;
                 state.readonly = true;
             })
             .addCase(updateProfileData.rejected, (state, action) => {
-                state.error = action.payload;
+                state.validateErrors = action.payload;
                 state.isLoading = false;
             });
     },

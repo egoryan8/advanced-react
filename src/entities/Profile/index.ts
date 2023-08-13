@@ -22,4 +22,5 @@ export {
     getProfileData,
     getProfileReadonly,
     getProfileForm,
+    getProfileValidateErrors,
 } from './model/selectors';
